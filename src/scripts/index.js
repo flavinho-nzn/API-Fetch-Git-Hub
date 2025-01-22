@@ -1,5 +1,6 @@
 import { getUser } from './service/user.js'
 import { getRepositories} from './service/repositories.js'
+import { getEvents } from './service/event.js'
 
 
 import { user } from './objects/user.js'
@@ -42,14 +43,18 @@ async function getUserData(userName) {
         }
 
         const repositoriesResponse = await getRepositories(userName);
+        const eventsResponse = await getEvents(userName);
 
         user.setInfo(userResponse);
         user.setRepositories(repositoriesResponse);
 
         screen.renderUser(user);
+        screen.renderEvents(eventsResponse);
     } catch (error) {
         console.error("Erro ao obter dados do usuário:", error);
         screen.renderNotFound(); // Pode renderizar mensagem de erro genérica
     }
 }
+
+
 

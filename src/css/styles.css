@@ -128,7 +128,8 @@ main {
   text-align: center;
 }
 
-.container .profile-data .repositories ul{
+
+container .profile-data .repositories ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -146,6 +147,21 @@ main {
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
+}
+
+.container .profile-data .repositories ul li .repo-details {
+  display: flex;
+  flex-direction: row; /* Exibe os itens na horizontal */
+  gap: 10px; /* Espaçamento entre os itens */
+  margin-top: 10px; /* Espaçamento entre o link e os detalhes */
+}
+
+.container .profile-data .repositories ul li .repo-details p {
+  background-color: #6a0dad; /* Cor de fundo roxa */
+  padding: 5px 10px; /* Padding interno para espaçamento */
+  border-radius: 5px; /* Bordas arredondadas */
+  color: #fff; /* Texto branco */
+  margin: 0 5px; /* Espaçamento horizontal entre os parágrafos */
 }
 
 .container .profile-data.hide{
